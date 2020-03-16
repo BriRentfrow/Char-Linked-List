@@ -27,7 +27,7 @@ public class CharLinkedList
 		node.setNext(head);
 		head = node;
 		if (tail == null)
-			tail = node;			// Corner case: inserting into empty node
+			tail = node;		// Corner case: inserting into empty node
 		
 		assert hasIntegrity();		// Postcondition
 	}
@@ -55,8 +55,7 @@ public class CharLinkedList
 	boolean hasIntegrity()
 	{
 		// Check emptiness. If either head or tail is null, the other must
-		// also be null. Different logic from what you saw in lecture. Returns
-		// immediately if this list is empty.
+		// also be null. Returns immediately if this list is empty.
 		if (head == null  ||  tail == null)
 			return head == null  &&  tail == null;
 		
